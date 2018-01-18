@@ -33,7 +33,6 @@ $(document).ready(function(){
         success: function(result) {
             console.log(result);
             buildCountrySelector(result);
-
         },
         error: function() { alert('Failed!'); }
     });
@@ -131,7 +130,7 @@ function getNyTimesGeneral(){
     var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
     url += '?' + $.param({
         'api-key': "c6de1aa1485c47879b0e29bd26f6c45c",
-        'q': '"global warming" United States of America'
+        'q': '"global warming"'
     });
     nyTimes(url);
 }
